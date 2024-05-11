@@ -1,20 +1,26 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+### Table of Contents
+- [Introduction](#introduction)
+- [Dependencies](#versioning)
+- [Versioning](#versioning)
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+### Introduction 
+A small console application that reads png files and compresses them into a jpeg file format. Tools like this exist, but this is built for helping compress large files that I use for my Church's Narthex slideshow.
+I eventually would like to make a simple UI using MAUI or WPF. 
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+### Dependencies
+.NET 8 is a dependency for this project
+
+### Versioning 
+
+5/11/2024 - 1.0.1
+- Added compression options to reduce file size (Narthex TV still had issues rendering the images)
+- Cleaned up code
+
+4/24/2024 - 1.0.0
+- Initial upload to GitHub
+
+
+
+

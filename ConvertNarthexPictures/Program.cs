@@ -8,7 +8,7 @@ using IHost host = Host.CreateDefaultBuilder(args).Build();
 IConfiguration config = host.Services.GetRequiredService<IConfiguration>();
 string directoryPath = config["AppSettings:FilePath"];
 
-ConvertNarthexPicturesCore core = new ConvertNarthexPicturesCore();
+ConvertNarthexPicturesBusiness core = new ConvertNarthexPicturesBusiness();
 Console.WriteLine(directoryPath);
 
 
