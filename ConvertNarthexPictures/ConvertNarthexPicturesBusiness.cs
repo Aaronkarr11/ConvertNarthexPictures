@@ -33,7 +33,7 @@ namespace ConvertNarthexPictures
                         using (var outStream = new MemoryStream())
                         {
 
-                            var myEncoderParameter = new EncoderParameter(myEncoder, 50L);
+                            var myEncoderParameter = new EncoderParameter(myEncoder, 30L);
                             myEncoderParameters.Param[0] = myEncoderParameter;
                             bmp.Save(outStream, jpgEncoder, myEncoderParameters);
                             return outStream.ToArray();
