@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Imaging;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing.Imaging;
 using System.IO.Compression;
-using System.Runtime.Intrinsics.X86;
 
 namespace ConvertNarthexPictures
 {
-    public class ConvertNarthexPicturesBusiness
+    public class ConvertNarthexPicturesBusiness : IConvertNarthexPicturesBusiness
     {
         public ConvertNarthexPicturesBusiness()
         {

@@ -1,8 +1,8 @@
 
 ### Table of Contents
 - [Introduction](#introduction)
-- [Dependencies](#versioning)
-- [Versioning](#versioning)
+- [Dependencies](#dependencies)
+- [Updates](#updates)
 
 
 ### Introduction 
@@ -12,7 +12,10 @@ I eventually would like to make a simple UI using MAUI or WPF.
 ### Dependencies
 .NET 8 is a dependency for this project
 
-### Versioning 
+### Updates 
+
+5/19/2024 - 1.0.2
+- Added a WinForms UI
 
 5/11/2024 - 1.0.1
 - Added compression options to reduce file size (Narthex TV still had issues rendering the images)

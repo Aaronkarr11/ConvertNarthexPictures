@@ -1,38 +1,17 @@
-﻿using ConvertNarthexPictures;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-
-
-using IHost host = Host.CreateDefaultBuilder(args).Build();
-IConfiguration config = host.Services.GetRequiredService<IConfiguration>();
-string directoryPath = config["AppSettings:FilePath"];
-
-ConvertNarthexPicturesBusiness core = new ConvertNarthexPicturesBusiness();
-Console.WriteLine(directoryPath);
-
-
-try
+namespace ConvertNarthexPictures
 {
-    string[] fileNames = Directory.GetFiles(directoryPath);
-    int counter = 0;
-
-    foreach (string fileName in fileNames)
+    internal static class Program
     {
-        byte[] bytes = File.ReadAllBytes(fileName);
-        var newFile = core.ConvertPngToJpeg(bytes);
-
-        string newFilePath = config["AppSettings:NewFilePath"];
-
-        counter++;
-        newFilePath = $"{newFilePath}{counter}.jpeg";
-        core.WriteByteArrayToFile(newFilePath, newFile);
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Form1());
+        }
     }
-
-    Console.WriteLine("All Done");
-    Console.ReadLine();
-}
-catch (Exception ex)
-{
-    Console.WriteLine(ex.Message);
 }
