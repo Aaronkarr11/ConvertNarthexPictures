@@ -87,9 +87,5 @@ namespace ConvertNarthexPictures
             txtOutput.Text = settings.OutputLocation;
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

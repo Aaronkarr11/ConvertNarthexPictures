@@ -100,11 +100,12 @@
             // 
             button1.BackColor = SystemColors.ControlLight;
             button1.Location = new Point(366, 159);
-            button1.Name = "button1";
+            button1.Name = "btnCopy";
             button1.Size = new Size(127, 43);
             button1.TabIndex = 6;
             button1.Text = "Copy and Compress";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += btnCopy_Click;
             // 
             // btnLoadSettings
             // 
@@ -126,7 +127,6 @@
             groupBox1.Size = new Size(265, 52);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // Form1
             // 
