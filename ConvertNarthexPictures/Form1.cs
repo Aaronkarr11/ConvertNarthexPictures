@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace ConvertNarthexPictures
 {
     public partial class Form1 : Form
@@ -66,6 +68,23 @@ namespace ConvertNarthexPictures
             {
                 lblOutput.Text = ex.Message;
             }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Settings settings = new Settings();
+            settings.InputLocation = txtInput.Text;
+            settings.OutputLocation = txtOutput.Text;
+
+            string jsonString = JsonSerializer.Serialize(settings);
+            _convertNarthexPicturesBusiness.WriteSettings(jsonString);
+        }
+
+        private void btnLoadSettings_Click(object sender, EventArgs e)
+        {
+            Settings settings = _convertNarthexPicturesBusiness.ReadSettings();
+            txtInput.Text = settings.InputLocation;
+            txtOutput.Text = settings.OutputLocation;
         }
     }
 }
