@@ -67,7 +67,7 @@ namespace ConvertNarthexPictures
             {
                 var settings = File.ReadAllText(@$"C:\Users\{Environment.UserName}\AppData\Roaming\ConvertNarthexSettings\settings.json");
                 settingsResult = JsonSerializer.Deserialize<Settings>(settings);
-                if (settingsResult != null)
+                if (settingsResult == null)
                 {
                     settingsResult.InputLocation = string.Empty;
                     settingsResult.OutputLocation = string.Empty;
