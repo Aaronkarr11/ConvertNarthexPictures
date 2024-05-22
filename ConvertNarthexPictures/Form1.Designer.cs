@@ -46,7 +46,7 @@
             btnInput.BackColor = SystemColors.ControlLight;
             btnInput.Location = new Point(366, 28);
             btnInput.Name = "btnInput";
-            btnInput.Size = new Size(109, 23);
+            btnInput.Size = new Size(127, 23);
             btnInput.TabIndex = 0;
             btnInput.Text = "Input Location";
             btnInput.UseVisualStyleBackColor = false;
@@ -57,7 +57,7 @@
             btnOutput.BackColor = SystemColors.ControlLight;
             btnOutput.Location = new Point(366, 103);
             btnOutput.Name = "btnOutput";
-            btnOutput.Size = new Size(109, 23);
+            btnOutput.Size = new Size(127, 23);
             btnOutput.TabIndex = 1;
             btnOutput.Text = "Output Location";
             btnOutput.UseVisualStyleBackColor = false;
