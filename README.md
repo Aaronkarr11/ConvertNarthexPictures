@@ -14,6 +14,10 @@ I eventually would like to make a simple UI using MAUI or WPF.
 
 ### Updates 
 
+6/18/2024 - 1.0.3
+- Added a progress bar
+- Added an output message
+
 5/19/2024 - 1.0.2
 - Added a WinForms UI
 
