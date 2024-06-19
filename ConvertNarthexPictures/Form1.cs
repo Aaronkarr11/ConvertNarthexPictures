@@ -1,4 +1,4 @@
-using System.Text.Json;
+﻿using System.Text.Json;
 
 namespace ConvertNarthexPictures
 {
@@ -11,8 +11,14 @@ namespace ConvertNarthexPictures
 
         public Form1()
         {
+
+
+
             _convertNarthexPicturesBusiness = new ConvertNarthexPicturesBusiness();
             InitializeComponent();
+            progressBar1.Visible = false;
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
         }
 
         private void btnInput_Click(object sender, EventArgs e)
@@ -43,6 +49,8 @@ namespace ConvertNarthexPictures
 
         private void btnCopy_Click(object sender, EventArgs e)
         {
+            progressBar1.Visible = true;
+            progressBar1.Value = 0;
             lblOutput.Text = "";
             try
             {
@@ -51,6 +59,7 @@ namespace ConvertNarthexPictures
 
                 string[] fileNames = Directory.GetFiles(_inputURL);
                 int counter = 0;
+                int totalFiles = fileNames.Count();
 
                 foreach (string fileName in fileNames)
                 {
@@ -60,13 +69,23 @@ namespace ConvertNarthexPictures
                     counter++;
                     newFilePath = $"{_outputURL}\\{counter}.jpeg";
                     _convertNarthexPicturesBusiness.WriteByteArrayToFile(newFilePath, newFile);
+   
+                    RenderLoadingBar(totalFiles, counter);
                 }
 
-                lblOutput.Text = "All Done!";
             }
             catch (Exception ex)
             {
                 lblOutput.Text = ex.Message;
+            }
+        }
+
+        private void RenderLoadingBar(int total, int current)
+        {
+            progressBar1.PerformStep();
+            if (total == current)
+            {
+                lblOutput.Text = "All Done! 😊";
             }
         }
 
