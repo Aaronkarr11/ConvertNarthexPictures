@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Web;
 
 namespace ConvertNarthexPictures
 {
@@ -6,14 +7,10 @@ namespace ConvertNarthexPictures
     {
         private string _inputURL;
         private string _outputURL;
-
         private IConvertNarthexPicturesBusiness _convertNarthexPicturesBusiness;
 
         public Form1()
         {
-
-
-
             _convertNarthexPicturesBusiness = new ConvertNarthexPicturesBusiness();
             InitializeComponent();
             progressBar1.Visible = false;
@@ -69,10 +66,9 @@ namespace ConvertNarthexPictures
                     counter++;
                     newFilePath = $"{_outputURL}\\{counter}.jpeg";
                     _convertNarthexPicturesBusiness.WriteByteArrayToFile(newFilePath, newFile);
-   
+
                     RenderLoadingBar(totalFiles, counter);
                 }
-
             }
             catch (Exception ex)
             {

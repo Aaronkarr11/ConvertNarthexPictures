@@ -140,10 +140,11 @@
             // lblOutput
             // 
             lblOutput.AutoSize = true;
-            lblOutput.Location = new Point(550, 709);
+            lblOutput.Location = new Point(250, 691);
             lblOutput.Name = "lblOutput";
             lblOutput.Size = new Size(0, 41);
             lblOutput.TabIndex = 10;
+            lblOutput.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

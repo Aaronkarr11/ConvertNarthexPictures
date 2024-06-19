@@ -1,5 +1,4 @@
 ﻿using System.Drawing.Imaging;
-using System.IO.Compression;
 using System.Text.Json;
 
 namespace ConvertNarthexPictures
@@ -79,17 +78,6 @@ namespace ConvertNarthexPictures
                 settingsResult.InputLocation = string.Empty;
                 settingsResult.OutputLocation = string.Empty;
                 return settingsResult;
-            }
-        }
-
-        private byte[] Compress(Stream input)
-        {
-            using (var compressStream = new MemoryStream())
-            using (var compressor = new DeflateStream(compressStream, CompressionMode.Compress))
-            {
-                input.CopyTo(compressor);
-                compressor.Close();
-                return compressStream.ToArray();
             }
         }
 
