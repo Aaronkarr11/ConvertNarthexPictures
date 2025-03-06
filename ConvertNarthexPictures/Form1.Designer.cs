@@ -39,16 +39,16 @@
             groupBox1 = new GroupBox();
             progressBar1 = new ProgressBar();
             lblOutput = new Label();
+            vers = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // btnInput
             // 
             btnInput.BackColor = SystemColors.ControlLight;
-            btnInput.Location = new Point(889, 77);
-            btnInput.Margin = new Padding(7, 8, 7, 8);
+            btnInput.Location = new Point(366, 28);
             btnInput.Name = "btnInput";
-            btnInput.Size = new Size(308, 63);
+            btnInput.Size = new Size(127, 23);
             btnInput.TabIndex = 0;
             btnInput.Text = "Input Location";
             btnInput.UseVisualStyleBackColor = false;
@@ -57,10 +57,9 @@
             // btnOutput
             // 
             btnOutput.BackColor = SystemColors.ControlLight;
-            btnOutput.Location = new Point(889, 282);
-            btnOutput.Margin = new Padding(7, 8, 7, 8);
+            btnOutput.Location = new Point(366, 103);
             btnOutput.Name = "btnOutput";
-            btnOutput.Size = new Size(308, 63);
+            btnOutput.Size = new Size(127, 23);
             btnOutput.TabIndex = 1;
             btnOutput.Text = "Output Location";
             btnOutput.UseVisualStyleBackColor = false;
@@ -68,27 +67,24 @@
             // 
             // txtInput
             // 
-            txtInput.Location = new Point(58, 77);
-            txtInput.Margin = new Padding(7, 8, 7, 8);
+            txtInput.Location = new Point(24, 28);
             txtInput.Name = "txtInput";
-            txtInput.Size = new Size(764, 47);
+            txtInput.Size = new Size(317, 23);
             txtInput.TabIndex = 2;
             // 
             // txtOutput
             // 
-            txtOutput.Location = new Point(58, 282);
-            txtOutput.Margin = new Padding(7, 8, 7, 8);
+            txtOutput.Location = new Point(24, 103);
             txtOutput.Name = "txtOutput";
-            txtOutput.Size = new Size(764, 47);
+            txtOutput.Size = new Size(317, 23);
             txtOutput.TabIndex = 3;
             // 
             // btnSaveSettings
             // 
             btnSaveSettings.BackColor = SystemColors.ControlLight;
-            btnSaveSettings.Location = new Point(379, 49);
-            btnSaveSettings.Margin = new Padding(7, 8, 7, 8);
+            btnSaveSettings.Location = new Point(156, 18);
             btnSaveSettings.Name = "btnSaveSettings";
-            btnSaveSettings.Size = new Size(250, 66);
+            btnSaveSettings.Size = new Size(103, 24);
             btnSaveSettings.TabIndex = 4;
             btnSaveSettings.Text = "Save Locations";
             btnSaveSettings.UseVisualStyleBackColor = false;
@@ -97,10 +93,9 @@
             // button1
             // 
             button1.BackColor = SystemColors.ControlLight;
-            button1.Location = new Point(889, 435);
-            button1.Margin = new Padding(7, 8, 7, 8);
+            button1.Location = new Point(366, 159);
             button1.Name = "button1";
-            button1.Size = new Size(308, 118);
+            button1.Size = new Size(127, 43);
             button1.TabIndex = 6;
             button1.Text = "Copy and Compress";
             button1.UseVisualStyleBackColor = false;
@@ -109,10 +104,9 @@
             // btnLoadSettings
             // 
             btnLoadSettings.BackColor = SystemColors.ControlLight;
-            btnLoadSettings.Location = new Point(15, 49);
-            btnLoadSettings.Margin = new Padding(7, 8, 7, 8);
+            btnLoadSettings.Location = new Point(6, 18);
             btnLoadSettings.Name = "btnLoadSettings";
-            btnLoadSettings.Size = new Size(250, 66);
+            btnLoadSettings.Size = new Size(103, 24);
             btnLoadSettings.TabIndex = 7;
             btnLoadSettings.Text = "Load Locations";
             btnLoadSettings.UseVisualStyleBackColor = false;
@@ -122,36 +116,45 @@
             // 
             groupBox1.Controls.Add(btnSaveSettings);
             groupBox1.Controls.Add(btnLoadSettings);
-            groupBox1.Location = new Point(58, 410);
-            groupBox1.Margin = new Padding(7, 8, 7, 8);
+            groupBox1.Location = new Point(24, 150);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(7, 8, 7, 8);
-            groupBox1.Size = new Size(644, 142);
+            groupBox1.Size = new Size(265, 52);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(250, 630);
+            progressBar1.Location = new Point(103, 230);
+            progressBar1.Margin = new Padding(1);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(727, 41);
+            progressBar1.Size = new Size(299, 15);
             progressBar1.TabIndex = 9;
             // 
             // lblOutput
             // 
             lblOutput.AutoSize = true;
-            lblOutput.Location = new Point(250, 691);
+            lblOutput.Location = new Point(103, 253);
+            lblOutput.Margin = new Padding(1, 0, 1, 0);
             lblOutput.Name = "lblOutput";
-            lblOutput.Size = new Size(0, 41);
+            lblOutput.Size = new Size(0, 15);
             lblOutput.TabIndex = 10;
             lblOutput.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // vers
+            // 
+            vers.AutoSize = true;
+            vers.Location = new Point(457, 272);
+            vers.Name = "vers";
+            vers.Size = new Size(0, 15);
+            vers.TabIndex = 11;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
-            ClientSize = new Size(1268, 808);
+            ClientSize = new Size(522, 296);
+            Controls.Add(vers);
             Controls.Add(lblOutput);
             Controls.Add(progressBar1);
             Controls.Add(button1);
@@ -161,7 +164,6 @@
             Controls.Add(btnInput);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(7, 8, 7, 8);
             Name = "Form1";
             Text = "Convert Narthex Pictures";
             groupBox1.ResumeLayout(false);
@@ -181,5 +183,6 @@
         private GroupBox groupBox1;
         private ProgressBar progressBar1;
         private Label lblOutput;
+        private Label vers;
     }
 }

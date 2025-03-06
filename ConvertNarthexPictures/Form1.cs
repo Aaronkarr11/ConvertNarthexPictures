@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Reflection;
+using System.Text.Json;
 using System.Web;
 
 namespace ConvertNarthexPictures
@@ -11,8 +12,15 @@ namespace ConvertNarthexPictures
 
         public Form1()
         {
+    
+
             _convertNarthexPicturesBusiness = new ConvertNarthexPicturesBusiness();
             InitializeComponent();
+
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            Version version = assembly.GetName().Version;
+            vers.Text = $"v{version}";
+
             progressBar1.Visible = false;
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
@@ -58,6 +66,11 @@ namespace ConvertNarthexPictures
                 int counter = 0;
                 int totalFiles = fileNames.Count();
 
+                if (totalFiles < 10)
+                {
+                    progressBar1.Maximum = 10;
+                }
+
                 foreach (string fileName in fileNames)
                 {
                     string newFilePath = String.Empty;
@@ -66,8 +79,8 @@ namespace ConvertNarthexPictures
                     counter++;
                     newFilePath = $"{_outputURL}\\{counter}.jpeg";
                     _convertNarthexPicturesBusiness.WriteByteArrayToFile(newFilePath, newFile);
-
                     RenderLoadingBar(totalFiles, counter);
+
                 }
             }
             catch (Exception ex)
@@ -101,6 +114,7 @@ namespace ConvertNarthexPictures
             txtInput.Text = settings.InputLocation;
             txtOutput.Text = settings.OutputLocation;
         }
+
 
     }
 }
