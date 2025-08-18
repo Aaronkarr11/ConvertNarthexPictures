@@ -1,4 +1,5 @@
 ﻿using System.Drawing.Imaging;
+using System.IO;
 using System.Text.Json;
 
 namespace ConvertNarthexPictures
@@ -38,6 +39,28 @@ namespace ConvertNarthexPictures
             catch (Exception)
             {
                 return new byte[0];
+            }
+        }
+
+        public string DeleteFileContentsOfInputLocation(string inputFilePath)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(inputFilePath))
+                {
+                    return "Please include a file path";
+                }
+
+                var files = Directory.GetFiles(inputFilePath);
+                foreach (var file in files)
+                {
+                    File.Delete(file);
+                }
+                return "Successfully removed all files";
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
             }
         }
 

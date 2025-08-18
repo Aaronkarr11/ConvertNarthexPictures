@@ -12,8 +12,6 @@ namespace ConvertNarthexPictures
 
         public Form1()
         {
-    
-
             _convertNarthexPicturesBusiness = new ConvertNarthexPicturesBusiness();
             InitializeComponent();
 
@@ -115,6 +113,10 @@ namespace ConvertNarthexPictures
             txtOutput.Text = settings.OutputLocation;
         }
 
-
+        private void btnDeleteInputFiles_Click(object sender, EventArgs e)
+        {
+            var result = _convertNarthexPicturesBusiness.DeleteFileContentsOfInputLocation(txtInput.Text);
+            lblOutput.Text = result;
+        }
     }
 }

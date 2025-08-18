@@ -37,6 +37,8 @@
             button1 = new Button();
             btnLoadSettings = new Button();
             groupBox1 = new GroupBox();
+            button3 = new Button();
+            btnDeleteInputFiles = new Button();
             progressBar1 = new ProgressBar();
             lblOutput = new Label();
             vers = new Label();
@@ -114,17 +116,40 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(button3);
+            groupBox1.Controls.Add(btnDeleteInputFiles);
             groupBox1.Controls.Add(btnSaveSettings);
             groupBox1.Controls.Add(btnLoadSettings);
-            groupBox1.Location = new Point(24, 150);
+            groupBox1.Location = new Point(24, 136);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(265, 52);
+            groupBox1.Size = new Size(265, 113);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.MistyRose;
+            button3.Location = new Point(6, 80);
+            button3.Name = "button3";
+            button3.Size = new Size(253, 24);
+            button3.TabIndex = 9;
+            button3.Text = "Delete All Files From Output Location";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteInputFiles
+            // 
+            btnDeleteInputFiles.BackColor = Color.MistyRose;
+            btnDeleteInputFiles.Location = new Point(6, 51);
+            btnDeleteInputFiles.Name = "btnDeleteInputFiles";
+            btnDeleteInputFiles.Size = new Size(253, 24);
+            btnDeleteInputFiles.TabIndex = 8;
+            btnDeleteInputFiles.Text = "Delete All Files From Input Location";
+            btnDeleteInputFiles.UseVisualStyleBackColor = false;
+            btnDeleteInputFiles.Click += btnDeleteInputFiles_Click;
+            // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(103, 230);
+            progressBar1.Location = new Point(103, 253);
             progressBar1.Margin = new Padding(1);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(299, 15);
@@ -133,7 +158,7 @@
             // lblOutput
             // 
             lblOutput.AutoSize = true;
-            lblOutput.Location = new Point(103, 253);
+            lblOutput.Location = new Point(102, 268);
             lblOutput.Margin = new Padding(1, 0, 1, 0);
             lblOutput.Name = "lblOutput";
             lblOutput.Size = new Size(0, 15);
@@ -143,17 +168,19 @@
             // vers
             // 
             vers.AutoSize = true;
-            vers.Location = new Point(457, 272);
+            vers.Location = new Point(462, 299);
+            vers.Margin = new Padding(1, 0, 1, 0);
             vers.Name = "vers";
             vers.Size = new Size(0, 15);
             vers.TabIndex = 11;
+            vers.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
-            ClientSize = new Size(522, 296);
+            ClientSize = new Size(522, 342);
             Controls.Add(vers);
             Controls.Add(lblOutput);
             Controls.Add(progressBar1);
@@ -183,6 +210,8 @@
         private GroupBox groupBox1;
         private ProgressBar progressBar1;
         private Label lblOutput;
+        private Button btnDeleteInputFiles;
+        private Button button3;
         private Label vers;
     }
 }
