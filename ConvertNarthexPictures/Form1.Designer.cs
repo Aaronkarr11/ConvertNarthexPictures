@@ -37,7 +37,7 @@
             button1 = new Button();
             btnLoadSettings = new Button();
             groupBox1 = new GroupBox();
-            button3 = new Button();
+            btnDeleteOutputFiles = new Button();
             btnDeleteInputFiles = new Button();
             progressBar1 = new ProgressBar();
             lblOutput = new Label();
@@ -116,7 +116,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button3);
+            groupBox1.Controls.Add(btnDeleteOutputFiles);
             groupBox1.Controls.Add(btnDeleteInputFiles);
             groupBox1.Controls.Add(btnSaveSettings);
             groupBox1.Controls.Add(btnLoadSettings);
@@ -126,15 +126,16 @@
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             // 
-            // button3
+            // btnDeleteOutputFiles
             // 
-            button3.BackColor = Color.MistyRose;
-            button3.Location = new Point(6, 80);
-            button3.Name = "button3";
-            button3.Size = new Size(253, 24);
-            button3.TabIndex = 9;
-            button3.Text = "Delete All Files From Output Location";
-            button3.UseVisualStyleBackColor = false;
+            btnDeleteOutputFiles.BackColor = Color.MistyRose;
+            btnDeleteOutputFiles.Location = new Point(6, 80);
+            btnDeleteOutputFiles.Name = "btnDeleteOutputFiles";
+            btnDeleteOutputFiles.Size = new Size(253, 24);
+            btnDeleteOutputFiles.TabIndex = 9;
+            btnDeleteOutputFiles.Text = "Delete All Files From Output Location";
+            btnDeleteOutputFiles.UseVisualStyleBackColor = false;
+            btnDeleteOutputFiles.Click += btnDeleteOutputFiles_Click;
             // 
             // btnDeleteInputFiles
             // 
@@ -211,7 +212,7 @@
         private ProgressBar progressBar1;
         private Label lblOutput;
         private Button btnDeleteInputFiles;
-        private Button button3;
+        private Button btnDeleteOutputFiles;
         private Label vers;
     }
 }

@@ -42,16 +42,16 @@ namespace ConvertNarthexPictures
             }
         }
 
-        public string DeleteFileContentsOfInputLocation(string inputFilePath)
+        public string DeleteFileContentsOfDirectory(string path)
         {
             try
             {
-                if (string.IsNullOrEmpty(inputFilePath))
+                if (string.IsNullOrEmpty(path))
                 {
                     return "Please include a file path";
                 }
 
-                var files = Directory.GetFiles(inputFilePath);
+                var files = Directory.GetFiles(path);
                 foreach (var file in files)
                 {
                     File.Delete(file);

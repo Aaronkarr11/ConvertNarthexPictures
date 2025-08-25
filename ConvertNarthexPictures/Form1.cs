@@ -115,7 +115,13 @@ namespace ConvertNarthexPictures
 
         private void btnDeleteInputFiles_Click(object sender, EventArgs e)
         {
-            var result = _convertNarthexPicturesBusiness.DeleteFileContentsOfInputLocation(txtInput.Text);
+            var result = _convertNarthexPicturesBusiness.DeleteFileContentsOfDirectory(txtInput.Text);
+            lblOutput.Text = result;
+        }
+
+        private void btnDeleteOutputFiles_Click(object sender, EventArgs e)
+        {
+            var result = _convertNarthexPicturesBusiness.DeleteFileContentsOfDirectory(txtOutput.Text);
             lblOutput.Text = result;
         }
     }
