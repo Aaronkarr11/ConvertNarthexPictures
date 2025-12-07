@@ -40,8 +40,9 @@
             btnDeleteOutputFiles = new Button();
             btnDeleteInputFiles = new Button();
             progressBar1 = new ProgressBar();
-            lblOutput = new Label();
             vers = new Label();
+            lblOutput = new RichTextBox();
+            label1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -150,40 +151,50 @@
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(103, 253);
+            progressBar1.Location = new Point(103, 258);
             progressBar1.Margin = new Padding(1);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(299, 15);
             progressBar1.TabIndex = 9;
             // 
-            // lblOutput
-            // 
-            lblOutput.AutoSize = true;
-            lblOutput.Location = new Point(102, 268);
-            lblOutput.Margin = new Padding(1, 0, 1, 0);
-            lblOutput.Name = "lblOutput";
-            lblOutput.Size = new Size(0, 15);
-            lblOutput.TabIndex = 10;
-            lblOutput.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // vers
             // 
             vers.AutoSize = true;
-            vers.Location = new Point(462, 299);
+            vers.Location = new Point(462, 368);
             vers.Margin = new Padding(1, 0, 1, 0);
             vers.Name = "vers";
             vers.Size = new Size(0, 15);
             vers.TabIndex = 11;
             vers.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblOutput
+            // 
+            lblOutput.Enabled = false;
+            lblOutput.Location = new Point(24, 298);
+            lblOutput.Name = "lblOutput";
+            lblOutput.Size = new Size(469, 59);
+            lblOutput.TabIndex = 12;
+            lblOutput.Text = "";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(24, 280);
+            label1.Name = "label1";
+            label1.Size = new Size(48, 15);
+            label1.TabIndex = 13;
+            label1.Text = "Output:";
+            label1.Click += label1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
-            ClientSize = new Size(522, 342);
-            Controls.Add(vers);
+            ClientSize = new Size(522, 388);
+            Controls.Add(label1);
             Controls.Add(lblOutput);
+            Controls.Add(vers);
             Controls.Add(progressBar1);
             Controls.Add(button1);
             Controls.Add(txtOutput);
@@ -210,9 +221,10 @@
         private Button btnLoadSettings;
         private GroupBox groupBox1;
         private ProgressBar progressBar1;
-        private Label lblOutput;
         private Button btnDeleteInputFiles;
         private Button btnDeleteOutputFiles;
         private Label vers;
+        private RichTextBox lblOutput;
+        private Label label1;
     }
 }

@@ -124,5 +124,10 @@ namespace ConvertNarthexPictures
             var result = _convertNarthexPicturesBusiness.DeleteFileContentsOfDirectory(txtOutput.Text);
             lblOutput.Text = result;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
