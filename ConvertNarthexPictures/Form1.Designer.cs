@@ -43,13 +43,14 @@
             vers = new Label();
             lblOutput = new RichTextBox();
             label1 = new Label();
+            helpbtn = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // btnInput
             // 
             btnInput.BackColor = SystemColors.ControlLight;
-            btnInput.Location = new Point(366, 28);
+            btnInput.Location = new Point(377, 45);
             btnInput.Name = "btnInput";
             btnInput.Size = new Size(127, 23);
             btnInput.TabIndex = 0;
@@ -60,7 +61,7 @@
             // btnOutput
             // 
             btnOutput.BackColor = SystemColors.ControlLight;
-            btnOutput.Location = new Point(366, 103);
+            btnOutput.Location = new Point(377, 103);
             btnOutput.Name = "btnOutput";
             btnOutput.Size = new Size(127, 23);
             btnOutput.TabIndex = 1;
@@ -70,7 +71,7 @@
             // 
             // txtInput
             // 
-            txtInput.Location = new Point(24, 28);
+            txtInput.Location = new Point(24, 45);
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(317, 23);
             txtInput.TabIndex = 2;
@@ -96,7 +97,7 @@
             // button1
             // 
             button1.BackColor = SystemColors.ControlLight;
-            button1.Location = new Point(366, 159);
+            button1.Location = new Point(377, 159);
             button1.Name = "button1";
             button1.Size = new Size(127, 43);
             button1.TabIndex = 6;
@@ -186,12 +187,24 @@
             label1.Text = "Output:";
             label1.Click += label1_Click;
             // 
+            // helpbtn
+            // 
+            helpbtn.BackColor = SystemColors.ActiveCaption;
+            helpbtn.Location = new Point(429, 12);
+            helpbtn.Name = "helpbtn";
+            helpbtn.Size = new Size(75, 23);
+            helpbtn.TabIndex = 14;
+            helpbtn.Text = "Help";
+            helpbtn.UseVisualStyleBackColor = false;
+            helpbtn.Click += helpbtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(522, 388);
+            Controls.Add(helpbtn);
             Controls.Add(label1);
             Controls.Add(lblOutput);
             Controls.Add(vers);
@@ -226,5 +239,6 @@
         private Label vers;
         private RichTextBox lblOutput;
         private Label label1;
+        private Button helpbtn;
     }
 }

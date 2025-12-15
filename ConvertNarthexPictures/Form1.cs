@@ -129,5 +129,11 @@ namespace ConvertNarthexPictures
         {
 
         }
+
+        private void helpbtn_Click(object sender, EventArgs e)
+        {
+            var n = new Help();
+            n.Show();
+        }
     }
 }
