@@ -4,20 +4,16 @@ using System.Web;
 
 namespace ConvertNarthexPictures
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         private string _inputURL;
         private string _outputURL;
         private IConvertNarthexPicturesBusiness _convertNarthexPicturesBusiness;
 
-        public Form1()
+        public Main()
         {
             _convertNarthexPicturesBusiness = new ConvertNarthexPicturesBusiness();
             InitializeComponent();
-
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            Version version = assembly.GetName().Version;
-            vers.Text = $"v{version}";
 
             progressBar1.Visible = false;
             progressBar1.Minimum = 0;
@@ -132,8 +128,14 @@ namespace ConvertNarthexPictures
 
         private void helpbtn_Click(object sender, EventArgs e)
         {
-            var n = new Help();
-            n.Show();
+            var help = new Help();
+            help.Show();
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            var about = new About();
+            about.Show();
         }
     }
 }

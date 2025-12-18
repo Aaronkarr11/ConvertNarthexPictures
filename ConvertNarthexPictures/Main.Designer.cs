@@ -1,6 +1,6 @@
 ﻿namespace ConvertNarthexPictures
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             btnInput = new Button();
             btnOutput = new Button();
             txtInput = new TextBox();
@@ -40,19 +40,19 @@
             btnDeleteOutputFiles = new Button();
             btnDeleteInputFiles = new Button();
             progressBar1 = new ProgressBar();
-            vers = new Label();
             lblOutput = new RichTextBox();
             label1 = new Label();
             helpbtn = new Button();
+            btnAbout = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // btnInput
             // 
             btnInput.BackColor = SystemColors.ControlLight;
-            btnInput.Location = new Point(377, 45);
+            btnInput.Location = new Point(377, 55);
             btnInput.Name = "btnInput";
-            btnInput.Size = new Size(127, 23);
+            btnInput.Size = new Size(133, 23);
             btnInput.TabIndex = 0;
             btnInput.Text = "Input Location";
             btnInput.UseVisualStyleBackColor = false;
@@ -63,7 +63,7 @@
             btnOutput.BackColor = SystemColors.ControlLight;
             btnOutput.Location = new Point(377, 103);
             btnOutput.Name = "btnOutput";
-            btnOutput.Size = new Size(127, 23);
+            btnOutput.Size = new Size(133, 23);
             btnOutput.TabIndex = 1;
             btnOutput.Text = "Output Location";
             btnOutput.UseVisualStyleBackColor = false;
@@ -71,7 +71,7 @@
             // 
             // txtInput
             // 
-            txtInput.Location = new Point(24, 45);
+            txtInput.Location = new Point(24, 55);
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(317, 23);
             txtInput.TabIndex = 2;
@@ -99,7 +99,7 @@
             button1.BackColor = SystemColors.ControlLight;
             button1.Location = new Point(377, 159);
             button1.Name = "button1";
-            button1.Size = new Size(127, 43);
+            button1.Size = new Size(133, 43);
             button1.TabIndex = 6;
             button1.Text = "Copy and Compress";
             button1.UseVisualStyleBackColor = false;
@@ -158,16 +158,6 @@
             progressBar1.Size = new Size(299, 15);
             progressBar1.TabIndex = 9;
             // 
-            // vers
-            // 
-            vers.AutoSize = true;
-            vers.Location = new Point(462, 368);
-            vers.Margin = new Padding(1, 0, 1, 0);
-            vers.Name = "vers";
-            vers.Size = new Size(0, 15);
-            vers.TabIndex = 11;
-            vers.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // lblOutput
             // 
             lblOutput.Enabled = false;
@@ -190,24 +180,35 @@
             // helpbtn
             // 
             helpbtn.BackColor = SystemColors.ActiveCaption;
-            helpbtn.Location = new Point(429, 12);
+            helpbtn.Location = new Point(377, 8);
             helpbtn.Name = "helpbtn";
-            helpbtn.Size = new Size(75, 23);
+            helpbtn.Size = new Size(58, 23);
             helpbtn.TabIndex = 14;
             helpbtn.Text = "Help";
             helpbtn.UseVisualStyleBackColor = false;
             helpbtn.Click += helpbtn_Click;
             // 
-            // Form1
+            // btnAbout
+            // 
+            btnAbout.BackColor = Color.CadetBlue;
+            btnAbout.Location = new Point(452, 8);
+            btnAbout.Name = "btnAbout";
+            btnAbout.Size = new Size(58, 23);
+            btnAbout.TabIndex = 15;
+            btnAbout.Text = "About";
+            btnAbout.UseVisualStyleBackColor = false;
+            btnAbout.Click += btnAbout_Click;
+            // 
+            // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(522, 388);
+            Controls.Add(btnAbout);
             Controls.Add(helpbtn);
             Controls.Add(label1);
             Controls.Add(lblOutput);
-            Controls.Add(vers);
             Controls.Add(progressBar1);
             Controls.Add(button1);
             Controls.Add(txtOutput);
@@ -216,7 +217,7 @@
             Controls.Add(btnInput);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "Main";
             Text = "Convert Narthex Pictures";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
@@ -236,9 +237,9 @@
         private ProgressBar progressBar1;
         private Button btnDeleteInputFiles;
         private Button btnDeleteOutputFiles;
-        private Label vers;
         private RichTextBox lblOutput;
         private Label label1;
         private Button helpbtn;
+        private Button btnAbout;
     }
 }
